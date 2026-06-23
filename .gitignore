@@ -42,6 +42,6 @@ example
 /ios
 /android
 
-.env.local
+.env
 
 .env.local
