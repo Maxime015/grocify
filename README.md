@@ -16,8 +16,14 @@
   <img src="./assets/images/screenshots/a.png" style="width: 32%; margin-bottom: 10px;" />
   <img src="/assets/images/screenshots/b.png" style="width: 32%; margin-bottom: 10px;" />
   <img src="./assets/images/screenshots/c.png" style="width: 32%; margin-bottom: 10px;" />
-  <img src="./assets/images/screenshots/d.png" style="width: 32%; margin-bottom: 10px;" />
 
+  <img src="./assets/images/screenshots/d.png" style="width: 32%; margin-bottom: 10px;" />
+  <img src="./assets/images/screenshots/e.png" style="width: 32%; margin-bottom: 10px;" />
+  <img src="/assets/images/screenshots/f.png" style="width: 32%; margin-bottom: 10px;" />
+
+  <img src="./assets/images/screenshots/g.png" style="width: 32%; margin-bottom: 10px;" />
+  <img src="/assets/images/screenshots/h.png" style="width: 32%; margin-bottom: 10px;" />
+  <img src="./assets/images/screenshots/i.png" style="width: 32%; margin-bottom: 10px;" />
 </div>
 
 ---
