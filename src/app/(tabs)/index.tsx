@@ -27,7 +27,9 @@ export default function ListScreen() {
             <Text className="text-sm font-semibold uppercase tracking-[1px] text-muted-foreground">
               Shopping items
             </Text>
-            <Text className="text-sm text-muted-foreground">{pendingItems.length} active</Text>
+            <Text className="text-sm text-muted-foreground">
+              {pendingItems.length} active
+            </Text>
           </View>
         </View>
       }

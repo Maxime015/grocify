@@ -46,9 +46,10 @@
         {
           "url": "https://sentry.io/",
           "project": "grocify",
-          "organization": "azure-ex"
+          "organization": "scarface"
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true,
