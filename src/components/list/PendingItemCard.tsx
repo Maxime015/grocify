@@ -19,11 +19,11 @@ const PendingItemCard = ({ item }: { item: GroceryItem }) => {
 
   return (
     <View className="rounded-3xl border border-border bg-card p-4">
-      <View className="flex-row items-start gap-3">
+      <View className="flex-row items-start gap-4">
         <Pressable
-          className="mt-1 size-6 items-center justify-center rounded-full border-2 border-border bg-card"
+          className="self-center h-8 w-8 items-center justify-center rounded-full border-2 border-border bg-card"
           onPress={() => togglePurchased(item.id)}
-        ></Pressable>
+        />
 
         <View className="flex-1">
           <View className="flex-row items-center justify-between gap-2">

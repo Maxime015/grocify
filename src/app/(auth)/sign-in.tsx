@@ -190,7 +190,7 @@ export default function SignInScreen() {
         </View>
       </View>
 
-      <View className="flex-1 overflow-hidden rounded-t-[36px] bg-background px-6 pb-8 pt-6">
+      <View className="flex-1 overflow-hidden  bg-background px-6 pb-8 pt-6">
         <Text className="text-card-foreground" style={styles.logo}>
           Grocify
         </Text>
@@ -278,7 +278,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   background: {
-    height: 420,
+    height: 450,
     overflow: "hidden",
   },
   grid: {

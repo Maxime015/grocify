@@ -9,49 +9,84 @@ export default function InsightsStatsSection() {
   const completedItems = items.filter((item) => item.purchased).length;
   const pendingItems = totalItems - completedItems;
 
-  const completionRate = totalItems ? Math.round((completedItems / totalItems) * 100) : 0;
+  const completionRate = totalItems
+    ? Math.round((completedItems / totalItems) * 100)
+    : 0;
 
   return (
     <>
-      <View className="flex-row gap-2">
-        <View className="flex-1 rounded-3xl border border-border bg-card p-4">
-          <View className="h-8 w-8 items-center justify-center rounded-xl bg-primary">
-            <FontAwesome6 name="clock" size={18} color="#fff" />
+      <View className="flex-row gap-4">
+        <View className="flex-1 rounded-3xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-950/20">
+          <View className="flex-row items-center gap-3">
+            <View className="h-10 w-10 items-center justify-center rounded-2xl bg-amber-100 dark:bg-amber-900/40">
+              <FontAwesome6 name="clock" size={18} color="#F59E0B" />
+            </View>
+
+            <View>
+              <Text className="text-2xl font-bold text-foreground">
+                {pendingItems}
+              </Text>
+              <Text className="text-xs text-muted-foreground">Pending</Text>
+            </View>
           </View>
-          <Text className="mt-3 text-xs uppercase tracking-[1px] text-muted-foreground">
-            Pending
-          </Text>
-          <Text className="mt-1 text-3xl font-extrabold text-foreground">{pendingItems}</Text>
         </View>
 
-        <View className="flex-1 rounded-3xl border border-border bg-card p-4">
-          <View className="h-8 w-8 items-center justify-center rounded-xl bg-primary">
-            <FontAwesome6 name="check" size={18} color="#fff" />
+        <View
+          className="flex-1 rounded-3xl p-4"
+          style={{
+            backgroundColor: "#D1FAE520",
+            borderWidth: 1,
+            borderColor: "#A7F3D0",
+          }}
+        >
+          <View className="flex-row items-center gap-3">
+            <View
+              className="h-10 w-10 items-center justify-center rounded-2xl"
+              style={{ backgroundColor: "#D1FAE580" }}
+            >
+              <FontAwesome6 name="check" size={18} color="#39FF14" />
+            </View>
+
+            <View>
+              <Text className="text-2xl font-bold text-foreground">
+                {completedItems}
+              </Text>
+              <Text className="text-xs text-muted-foreground">Completed</Text>
+            </View>
           </View>
-          <Text className="mt-3 text-xs uppercase tracking-[1px] text-muted-foreground">
-            Completed
-          </Text>
-          <Text className="mt-1 text-3xl font-extrabold text-foreground">{completedItems}</Text>
         </View>
 
-        <View className="flex-1 rounded-3xl border border-border bg-card p-4">
-          <View className="h-8 w-8 items-center justify-center rounded-xl bg-primary">
-            <FontAwesome6 name="layer-group" size={18} color="#fff" />
+        <View className="flex-1 rounded-3xl border border-blue-200 bg-blue-50 p-4 dark:border-blue-900/40 dark:bg-blue-950/20">
+          <View className="flex-row items-center gap-3">
+            <View className="h-10 w-10 items-center justify-center rounded-2xl bg-blue-100 dark:bg-blue-900/40">
+              <FontAwesome6 name="layer-group" size={18} color="#3B82F6" />
+            </View>
+
+            <View>
+              <Text className="text-2xl font-bold text-foreground">
+                {totalItems}
+              </Text>
+              <Text className="text-xs text-muted-foreground">Total</Text>
+            </View>
           </View>
-          <Text className="mt-3 text-xs uppercase tracking-[1px] text-muted-foreground">Total</Text>
-          <Text className="mt-1 text-3xl font-extrabold text-foreground">{totalItems}</Text>
         </View>
       </View>
 
-      <View className="rounded-3xl border border-border bg-card p-4">
-        <View className="flex-row items-center justify-between">
-          <Text className="text-sm font-semibold text-foreground">Completion rate</Text>
-          <Text className="text-sm font-semibold text-primary">{completionRate}%</Text>
+      <View className="mt-1 rounded-3xl border border-border bg-card p-5">
+        <View className="mb-3 flex-row items-center justify-between">
+          <Text className="text-base font-semibold text-foreground">
+            Completion Rate
+          </Text>
+
+          <View className="rounded-full bg-blue-100 px-3 py-1 dark:bg-blue-900/40">
+            <Text className="font-bold text-foreground">{completionRate}%</Text>
+          </View>
         </View>
-        <View className="mt-3 overflow-hidden rounded-full bg-secondary">
+
+        <View className="h-3 overflow-hidden rounded-full bg-secondary">
           <View
-            className="h-3 rounded-full bg-ring"
-            style={{ width: `${Math.max(2, completionRate)}%` }}
+            className="h-full rounded-full bg-blue-500"
+            style={{ width: `${Math.max(completionRate, 2)}%` }}
           />
         </View>
       </View>
