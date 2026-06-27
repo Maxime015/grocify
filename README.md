@@ -11,8 +11,6 @@
 
 ## 📸 Screenshots
 
-<div style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;">
-
 <p align="center">
   <img src="/assets/images/screenshots/e.png" width="180" />
   &nbsp;&nbsp;
@@ -22,7 +20,6 @@
   &nbsp;&nbsp;
   <img src="./assets/images/screenshots/i.png" width="180" />
 </p>
-
 
 ---
 
